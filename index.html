@@ -251,13 +251,13 @@
 <form action="results.html">
 
 <div class="contact__inputs">      <!--  ده الجزء اللي شايل مكان الادخال   -->
-<input  class="contact__input" type="text" placeholder="Full Name "  name="fullname"     required  />
-<input  class="contact__input" type="tel"  placeholder="Phone No."  name="phone"    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"  required />  <!--  الباترن ده علشان يسمح بادخال رقم فقط وبنمط معين-->
+<input  id="contact__input" class="contact__input" type="text" placeholder="Full Name "  name="fullname"     required  />
+<input        id="contact__input"   class="contact__input" type="tel"  placeholder="Phone No."  name="phone"    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"  required />  <!--  الباترن ده علشان يسمح بادخال رقم فقط وبنمط معين-->
 </div>
 
 
-<textarea    class="contact__input    contact__textarea"   name="description" id="description" rows="1"  placeholder="Your Message  "  required></textarea>
-<input  class=" contact__button" type="submit" value="Send Message"  >
+<textarea    id="contact__input"     class="contact__input    contact__textarea"   name="description" id="description" rows="1"  placeholder="Your Message  "  required></textarea>
+<input        class=" contact__button" type="submit" value="Send Message"  >
 
 </form>
 

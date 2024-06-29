@@ -580,6 +580,7 @@ margin-left: 0.6rem;
   background: transparent;
   border-bottom: 0.1rem solid var(--color-input-border);
   flex: 1;   /*كده هياخدوا المساحة المتاحة ليهم بالتساوي*/
+  color: black;
 }
 .contact__textarea{
 width: 100%;
@@ -624,6 +625,12 @@ html:has(.toggle__chechbox:checked){
   --color-link-bg: var(--color-green);
   --color-grey: #080808;
   --color-input-border: var(--color-white);
+  
+ #contact__input{
+  color: #fff;
+ }
+
+
 }
 /*End  Theme*/
 
@@ -678,6 +685,7 @@ font-size: var(--font-size-24);
 order: -1;
 }
 }
+
 
 
 
