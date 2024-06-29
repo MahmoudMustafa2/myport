@@ -637,6 +637,7 @@ html:has(.toggle__chechbox:checked){
 
 
 
+
 /* هنا انا بعمل تعديلات علي تنسيق الصفحة علشان يناسب كل الاجهزة*/
 /*Responsive*/
 
@@ -684,6 +685,26 @@ font-size: var(--font-size-24);
 .contact__formcontact{
 order: -1;
 }
+
+
+.bio__pic__content::before{
+  width: 350px;
+  height: 500px;
+ }
+.section-with-bg1::before{
+
+width: 950px;
+
+height:1300px;
+}
+.section-with-bg2::before{
+
+  width: 100%;
+  height:420px;
+  }
+
+
+
 }
 
 
