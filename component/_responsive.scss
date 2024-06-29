@@ -1,0 +1,132 @@
+/*Responsive*/
+/*ده للكمبيوتر واللاب توب*/
+@media (max-width:1000px) {    /* هنا بقوله اي جهاز عرضه اصغر من 1000 بيكسل زي الموبايل او التابلت خلي الخط بتاعه 8 بيكسل*/
+    html{
+      font-size: 8px;   /*انا صغرت الخط هنا*/
+    }
+  
+  .section--with-bg{
+    width: 100%;
+  }  
+  }
+   
+  
+  /*ده التابلت*/
+  @media (max-width:800px) {      
+      
+  .container {
+     row-gap: 8rem; 
+    }
+   .section{
+    grid-template-columns: 1fr;
+   }
+   .bio__pic__content{
+    grid-row: 1;
+    justify-self: center;
+    margin-bottom: 4rem;
+   }
+  .skills__list{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .projects__main{
+    grid-template-columns: 1fr;
+    row-gap: 6rem;
+    justify-items: center;
+  }
+  .projects__data:nth-of-type(2){
+    order: 1;
+  }
+  .clients__opinions{
+  font-size: var(--font-size-24);
+  }
+  .contact{
+    row-gap: 6rem;
+  }
+  
+  .contact__formcontact{
+  order: -1;
+  
+  }
+  
+  }
+  
+  
+  
+  /* ده الفون*/
+  @media (max-width:500px) { 
+  
+  .header{
+  padding: 0;
+  }
+  .header::before{
+    z-index: 0;
+  }
+  
+  
+   .bio__pic{
+     width: 100%;
+  
+    }
+  
+    /*ده الكود  بتاع البرجر منيو */
+  .berger-menu{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap:0.75rem;
+    z-index: 0;
+    align-self: center;
+  }
+  
+  .berger-menu_bar{
+  height: 0.3rem;
+  width: 4.375rem;
+  background-color: var(--color-text);
+  transition: var(--transition-timing);
+  }
+  
+  /*ال3 سطور دول بتوع الانيميشن اللي هيحصل لما اضغط عليها
+  يعني شكل ال3 سطور الصغيرين هيبقوا علي شكل اكس*/
+  .header:has(.berger-menu__checkbox:checked) .berger-menu_bar:nth-child(1){
+  transform: translateY(10px)  rotate(40deg);
+  }
+  .header:has(.berger-menu__checkbox:checked) .berger-menu_bar:nth-child(2){
+   opacity: 0;
+   visibility: hidden;
+    }
+  .header:has(.berger-menu__checkbox:checked) .berger-menu_bar:nth-child(3){
+      transform: translateY(-7px)  rotate(-40deg);
+      
+      }
+  
+  
+      .berger-menu__checkbox:checked +.navigation{   /*100 السطر ده بقوله لما ادوس علي البرجر منيو خلي التوب */ 
+        top: 100%;                                           /*يعني هينزلها لتحت وتظهر*/
+      }
+  
+      .navigation{
+        position: absolute;
+        width: 100vw;
+        top: 0;
+        padding: 3rem 0;
+        border-bottom: 0.1rem solid var(--color-text);
+        background-color:var(--color-background);
+        transition: var(--transition-timing);
+        z-index: -1;
+      }
+      .navigation__list{
+        justify-content: center;    /*   justify-content  دي بتوسطن الكلام علي المحور الافقي*/
+       
+      }
+    .toggle{
+      padding: 3rem 0;
+      z-index: 1;
+    }
+    
+    
+  
+  
+    }
+  
+  
+  /*End Responsive*/

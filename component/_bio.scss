@@ -1,0 +1,100 @@
+
+
+/*bio */
+
+
+
+
+/*.section-with-bg{
+  padding: 11rem 0;
+} ده ساعد في تنسيق المهارات*/
+
+
+
+.bio{
+    column-gap: 7.4rem;
+    grid-template-columns: repeat(2,1fr);
+  
+  }
+  .bio__heading{
+    font-size: var(--font-size-70);
+    font-weight: var(--font-weight-bold);
+  }
+  .bio__objective{
+    font-family: var(--font-family-poppins);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-20);
+    margin: 3rem 0 8rem;
+  }
+  .bio__name{
+    font-weight: var(--font-weight-semi-bold);
+  
+  }
+  .bio__facebook{
+    color: #143ce8;
+  }
+  .bio__youtube{
+    color: #ff0000;
+  } 
+  .bio__linkes{
+    font-size: 2.4rem;
+    font-weight: var(--font-weight-semi-bold);
+    text-decoration: none;
+  }
+  .say-hi-link{
+    background-color:var(--color-link-bg);
+    color: var(--color-white);
+    padding: 0.7rem 4.7rem;
+  
+  }
+  .find-out-link{
+    padding: 0.7rem 0;
+    margin-inline-start: 1.4rem;
+  }
+  
+  /*الحركة بتاعة السهم*/
+  /*ده جزء الانيميشن*/
+  /*خليت اسم الانيميشن جمب واقدر استخدمه مع اي عنصر*/
+  @keyframes jump {
+      0% {transform: translateY(0.5rem);}
+      35% {transform: translateY(-0.5rem);}
+      70% {transform: translateY(0);}
+      100% {transform: translateY(0); }
+  }
+  /*هنا اديت الانيميشن للسهم*/
+  .bio__arrow{
+  display: inline-block;
+  animation: jump 1s infinite alternate ease-in-out;
+   }    
+  
+  
+   .bio__pic__content{
+    display: flex;
+    position: relative;
+    align-items: flex-end;  /*كده خليت العناصر اللي هو الخلفية السوداء تبدا من تحت*/
+    justify-self: end;  /*ده بقوله انه مياخدش المساحة كلها*/
+  
+   }
+    .bio__pic__content::before{   /*ده كود الخلفية السوداء*/
+    content: "";
+    position: absolute;
+    background-color: var(--color-box-img);
+    margin-bottom:38PX ;
+    width:580px ;
+    height: 900px;
+    z-index: -1;
+    box-shadow:2.17543px 8.7017px 38.0699px rgba(0, 0, 0, 0.15) ;
+    border-radius: 5%;
+    justify-self: end;
+    align-items: flex-start;
+    opacity: 0.4;
+  
+   }
+   .bio__pic{
+    width: 42.7rem;
+  
+   }
+  /*end bio*/
+  
+  
+  

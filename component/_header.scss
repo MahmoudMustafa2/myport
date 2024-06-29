@@ -1,0 +1,120 @@
+.header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-background);
+    display: flex; /*هنا انا اديتله الخاصية دي علشان يساعد ابناءه يطلع بره البارينت بتاعه وياخد عرض الصفحة كلها*/
+    justify-content: center;
+    padding: 3rem 0;
+    z-index: 1;
+  
+  
+  
+  }
+  
+  .header::before {
+    /*علشان خارج حدود الكونتينر*/
+    content: "";
+    position: absolute;
+    width: 100vw; /* هنا هياخد العرض كله ويطلع بره البارينت بتاعه*/
+    height: 100%; /*اخد ارتفاع البارينت كله*/
+    border-bottom: 0.1rem solid var(--color-input-border);
+    top: 0;
+    /*z-index: 1; /*  لو في حاجتين فوق بعض ده اللي هيظهر*/
+    z-index: -1; /* كده مش هو اللي هيظهر لو في حاجتين فوق بعض*/
+  
+  background-color: var(--color-background);    /*  السطر ده علي الهيدينج كله ياخد لون الخلفية يعني يطلع بره البارينت*/
+  
+  }
+  .navigation__list {
+    display: flex;
+    gap: 2rem;
+  }
+  .navigation__link:link,
+  .navigation__link:visited {
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .navigation__link:hover,
+  .navigation__link:active {
+    text-decoration: underline;
+    color: var(--color-text);
+  }
+  
+  
+  
+  /*ده الكود اللي بيخلي العناصر اللي في الهيدير تبقي ملونه بعد الانتقال ليها*/
+  /* هنا بقوله داخل الكونتينر لما التارجت بتاعي يبقي بايو روووح للنافيجيشن بايو   واديله الخصائص دي */
+  /* وبدل ما ادي نفس الكود لكل واحد جمعتهم كلهم وادتله الخصائص*/
+  .container:has(#bio:target) .navigation__bio ,
+  .container:has(#skills:target) .navigation__skills,    /*التارجت هنا بيبص للينك فوق ويلاحظ اننا في اي جزء وبعد كده ينفذ الخصائص*/
+  .container:has(#media:target) .navigation__media,      /*http://127.0.0.1:5500/#media   */
+  .container:has(#projects:target) .navigation__projects,
+  .container:has(#clients:target) .navigation__clients,
+  .container:has(#contact:target) .navigation__contact
+  {     
+    color: var(--color-blue);
+    text-decoration: underline;
+    font-weight: var(--font-weight-bold);
+  }
+  
+  
+  
+  .berger-menu__checkbox{
+    display: none;    /*علشان انا عاوزه يظهر في الفون فقط*/
+  }
+  
+  
+  
+  
+  /*toggle*/
+  .toggle {    /*هنا حددت مكانه في الصفحة*/
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+  }
+  .toggle__title {   /*   ده الكلاس بتاع عنوان التوجل*/
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-18);
+  }
+  .toggle__chechbox {    /*ده الكلاس بتاع التشيك بوكس نفسه*/
+    display: none;
+  }
+  /*ده الجزء الاسود*/
+  .toggle__label {    /*ده كلاس الليبيل بتاع التوجل */
+    /*بالكود   ده انا عملت الخلفية السوداء بتاعت التوجل داخل الليبيل*/
+  /*يعني ما هو الا لابيل ولاكن غيرت شكله كانه زرار */
+    display: block;
+    position: relative;
+    background-color: var(--color-black);
+    border-radius: 1.5rem;
+    width: 4.5rem;
+    height: 2.2rem;
+    cursor: pointer;  /*ده هيخلي شكل المؤشر يعامله كانه زرار*/
+    padding: 0.3rem 0.4rem;
+    transition: 0.3s;
+  }
+    /*انشاء الجزء الابيض اللي بداخل الجزء الاسود*/
+  
+  .toggle__label::after {   
+    content: "";
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    display: block;
+    background-color: white;
+    transition: 0.3s;
+  
+  }
+  /*لحد هنا انا عملت الشكل فقط اللي هو جزء اسود وبداخله كورة بيضاء*/
+  
+  /*دول اللي هيعملوا الحركه ويغيروا الالوان بتاعت الليبيل*/
+  .toggle__chechbox:checked + .toggle__label{       /* هنا بعلامه + بقول التوجل لابييل اللي بعد الشيك بوكس ده علطول هو اللي يتغير لما يحصل شيكد*/
+    background-color: var(--color-white);
+  }
+  
+  .toggle__chechbox:checked + .toggle__label::after{
+    transform:translateX(2.1rem);
+    background-color: var(--color-green);
+  }
+  /*end toggle*/

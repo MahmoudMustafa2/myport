@@ -1,0 +1,21 @@
+
+
+/*clients*/
+.clients__opinions{
+    grid-column: 1/-1;
+    font-size: var(--font-size-40);
+    line-height: 1.7;
+  
+  }
+  .clients__wrapper{
+    display: flex;
+    overflow-x: auto;                        /*كده انا عملت سكرول داخل الرابر فقط مش الصفحة كلها*/
+    scroll-snap-type: x mandatory ;         /* السطر ده علشان علامة الاسكور تروح للراي الاقرب ليها وتكون في بداية احد منهم*/
+  }
+  .clients__opinion{
+    flex-basis: 100%;
+    flex-shrink: 0;                                       /*علشان نطلعه بره الاب*/
+    scroll-snap-align: start;                           /*السطر ده علشان علامة الاسكور تروح للراي الاقرب ليها*/
+  }
+  /*end clients*/
+  

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />      <!--لما بشيل السطر ده تنسيق الموقع بيتغير لوحده-->
+                                                                                  <!-- لاكن طالما قاعد فهو مش هيسمح لتنسيق الصفحة انه يتغير-->
+    <title>Mahmoud Mustafa</title>
+    <link <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="style.css" /> 
+<!--   <link rel="stylesheet" href="/styles/style.css" /> -->
+  </head>
+  <body>
+    <div class="container">
+
+     <video class="video__loop" autoplay loop muted>    <!--ده الفيديو اللي شغال في الخلفية-->
+        <source src="video.mp4" type="video/mp4">
+      </video>
+
+
+
+      <header class="header">
+<label   class="berger-menu"  for="menu" >
+
+
+<div class="berger-menu_bar"></div>
+<div class="berger-menu_bar"></div>
+<div class="berger-menu_bar"></div>
+
+
+</label>
+<input class="berger-menu__checkbox" id="menu" type="checkbox"/>
+
+
+
+        <!-- nav.navigation>ul.navigation_list>li*6>a.navigation_link -->
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li><a href="#bio" class="navigation__link  navigation__bio ">Bio</a></li>
+            <li><a href="#skills" class="navigation__link   navigation__skills">Certificates</a></li>
+            <li><a href="#media" class="navigation__link    navigation__media">Media</a></li>
+            <li><a href="#projects" class="navigation__link    navigation__projects">Projects</a></li>
+            <li><a href="#clients" class="navigation__link    navigation__clients">My Clients</a></li>
+            <li><a href="#contact" class="navigation__link    navigation__contact">Contact</a></li>
+          </ul>
+        </nav>
+
+
+
+        
+        <div class="toggle">
+          <h3 class="toggle__title">Switch Theme</h3>  <!--ده العنوان-->
+
+          <input type="checkbox" name="toggle chechbox" id="toggle" class="toggle__chechbox" />
+
+          <label for="toggle" class="toggle__label"></label>     
+           <!--for  دي بتساعد اني بقوله بوص علي التوجل يعني لما اضغط علي الاسم يحصل تعليم علي التوجل-->
+        </div>
+      </header>
+
+
+
+
+        <!-- ده الجزء بتاع البايو-->
+  <section id="bio" class="bio section">
+    <div class="bio__data">       
+<h1 class="bio__heading"> Welcome, <br>  I am  Mahmoud Mustafa , <br> a software engineer</h1>
+<p class="bio__objective">
+  My Name is <span class="bio__name">Mahmoud Mustafa</span> , I am a student in the Faculty of Engineering at South Valley University,From Qena Governorate in Upper Egypt, I love programming and the field of technology in general. , and my profile in facebook is 
+  <a href="https://www.facebook.com/profile.php?id=61558080627301&locale=ar_AR"  target="_blank"     class="bio__facebook"> FaceBook Account</a> ,and my channel youtube is <a href="https://www.youtube.com/channel/UCfqk_R2eXKgSXzNQuZ9jlIw"   target="_blank"     class="bio__youtube">YouTube Channel </a>.
+  I will be very happy if you follow me .
+</p>
+
+
+
+<a href="#contact"   class="bio__linkes say-hi-link">say hi</a>
+<a href="./images/certificate/cv.pdf" target="_blank"  class="bio__linkes find-out-link">Download My Certificates  <sapn class="bio__arrow">↓</sapn></a>
+
+</div>
+<div class=" bio__pic__content">
+  <img class="bio__pic"   src="images/mmmm.png" alt="mahmoudmustafaphto">
+</div>
+
+        </section>
+
+
+  <!-- ده الجزء بتاع المهارات-->
+ <!--  <section   id="skills"    class="skills__section   section-with-bg" >
+    <h2 class="h2-heading">Skills</h2>
+
+
+  <ul class="skills__list">
+    <li class="skills__item">
+      <h2 class="skills__title">HTML</h2>
+      <span class="skills_years">1 yrars</span>
+    </li>
+    <li class="skills__item">
+      <h2 class="skills__title">CSS</h2>
+      <span class="skills_years">1 yrars</span>
+    </li>
+    <li class="skills__item">
+      <h2 class="skills__title">Java Script</h2>
+      <span class="skills_years">1 yrars</span>
+    </li>
+    <li class="skills__item">
+      <h2 class="skills__title">React</h2>
+      <span class="skills_years">1 yrars</span>
+    </li>
+    <li class="skills__item">
+      <h2 class="skills__title">Redux</h2>
+      <span class="skills_years">1 yrars</span>
+    </li>
+    <li class="skills__item">
+      <h2 class="skills__title">React testing library</h2>
+      <span class="skills_years">1 yrars</span>
+    </li>
+  </ul>
+  </section>
+ -->
+
+
+
+  <!--  ده  محاولة مني لاضافة الشهادات بدل من المهارات ولكن بنفس الاسم -->
+
+ <section   id="skills"    class="skills__section   section-with-bg1" >
+  <h2 class="h2-heading">My Certificates</h2>
+
+
+<div class="skills">
+  <h2 class="skills__title">Basics Of<br> Programming Certificate</h2>
+  <img class="cr__pic"   src="images/certificate/BP.png" alt="Basics Of Programming">
+</div>
+
+<div class="skills">
+  <h2 class="skills__title">HTML<br> Certificate</h2>
+    <img class="cr__pic"   src="images/certificate/HTML.png" alt="HTML">
+</div>
+
+
+<div class="skills">
+  <h2 class="skills__title">CSS<br> Certificate</h2>
+  <img class="cr__pic"   src="images/certificate/CSS.png" alt="CSS">
+</div>
+
+
+<div class="skills">
+  <h2 class="skills__title">CSS Layout<br> Certificate</h2>
+  <img class="cr__pic"   src="images/certificate/css layout.png" alt="CSS LAYOUT">
+</div>
+
+</section>
+
+
+
+
+
+
+  <!-- ده الجزء بتاع الميديا-->
+  <section id="media" class="media section">
+ <video class="media__video"  poster="./images/th.png" controls>
+ <source src="video.mp4" type="video/mp4"/>
+</video>
+
+</section>
+
+
+
+
+
+
+  <!-- ده الجزء بتاع المشاريع-->
+ <section id="projects"class="projects section">
+  <h2 class="h2-heading">SOME MY PROJECTS</h2>
+<div class="projects__main">
+
+  <img   class="projects__img"  src="./images/projects/waether app.png" alt="waetherappphoto"/>
+  <div class="projects__data">
+    <h3 class="h3-heading">Waether<br> Application</h3>
+    <p class="project__description">The weather application is an application to know today’s weather conditions and was programmed in the Python language by  Mahmoud Mustafa. </p>
+    <a  class="projects__link"     href="#">Waether Application</a>
+    
+  </div>
+
+  <div class="projects__data">
+    <h3 class="h3-heading">Expenses Tracker<br> Application</h3>
+    <p class="project__description"> The expense tracking application is an application for tracking daily expenses and was programmed in the Python language by  Mahmoud Mustafa.</p>
+    <a  class="projects__link"     href="#">Expenses Tracker Application</a>
+  </div>
+  <img   class="projects__img"      src="./images/projects/expenses tracker.png" alt="expensestrackerphoto"/>
+</div>
+ </section>
+
+
+
+   <!-- ده الجزء بتاع العملاء-->
+<section id="clients"      class="clients section   section-with-bg2">
+ <h2 class="h2-heading">what my<br> clients say</h2>
+<div  class="clients__opinions">
+  <div  class="clients__wrapper">
+    <p class="clients__opinion"> "I am incredibly impressed with the outstanding work you did in designing and developing our company website. Every request was executed with precision, and the final result is nothing short of amazing. The website's user interaction is seamless, and the attractive design has significantly increased customer engagement. Thank you for your professionalism and creativity!".</p>
+    <p class="clients__opinion">"Working with Mahmoud was a fantastic experience. The website you created for us is not only visually stunning but also highly functional. Your expertise and dedication to delivering a high-quality product are evident in every aspect of the site. Our online presence has never been stronger, and our customers are very pleased. Highly recommended!".</p>
+    <p class="clients__opinion"> "I needed a website that reflects my company's vision and goals, and you have exceeded my expectations. The team, led by Mahmoud, was highly professional and paid great attention to detail. I've received positive feedback from clients, and I am thrilled with the outcome. Thank you for a fantastic job!"</p>
+</div>
+
+
+</section>
+
+
+
+
+
+  <!-- ده الجزء بتاع التواصل-->
+<section id="contact" class="contact section">   <!-- هنا حاطط كلاس سيكشن علشان اديله نفس التنسيق-->
+<div>
+  <p class="contact__description">My Name is Mahmoud Mustafa Sayed <br> Please Contact with me if you need Anyhelp</p>
+
+  <a class="contact__email"     href="mailto:mahmoudmustafa2020202020@gmail.com">mahmoudmustafa2020202020@gmail.com</a>
+
+<div class="contact__socials">
+   <a href="https://www.facebook.com/profile.php?id=61558080627301&sk=about&locale=ar_AR" class="contact__social" target="_blank">
+     <img src="./images/brand/facebook.svg" alt="icon of facebook">
+   </a>
+
+<a href="https://github.com/MahmoudMustafa2" class="contact__social" target="_blank">
+  <img src="./images/brand/github.svg" alt="icon of github">
+</a>
+
+<a href="https://www.linkedin.com/in/mahmoud-mustafa-a59910310/
+" class="contact__social" target="_blank">
+  <img src="./images/brand/LinkedIn.svg" alt="icon of linkedin" >
+</a>
+
+<a href="https://www.youtube.com/channel/UCfqk_R2eXKgSXzNQuZ9jlIw" class="contact__social" target="_blank">
+  <img src="./images/brand/youtube.svg" alt="icon of youtube">
+</a>
+</div>
+</div>
+
+
+
+<!-- ده الجزء بتاع ادخال البيانات-->
+ <div class="contact__formcontact">
+  <h2 class="h2-heading">Let's Work <br/>
+      Together
+  </h2>
+<form action="results.html">
+
+<div class="contact__inputs">      <!--  ده الجزء اللي شايل مكان الادخال   -->
+<input  class="contact__input" type="text" placeholder="Full Name "  name="fullname"     required  />
+<input  class="contact__input" type="tel"  placeholder="Phone No."  name="phone"    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"  required />  <!--  الباترن ده علشان يسمح بادخال رقم فقط وبنمط معين-->
+</div>
+
+
+<textarea    class="contact__input    contact__textarea"   name="description" id="description" rows="1"  placeholder="Your Message  "  required></textarea>
+<input  class=" contact__button" type="submit" value="Send Message"  >
+
+</form>
+
+ </div>
+
+</section>
+
+
+  <!-- ده الجزء بتاع الفوتر-->
+<footer class="footer">©  2024 By Mahmoud Mustafa Sayed</footer> 
+
+
+    </div>
+  </body>
+</html>
