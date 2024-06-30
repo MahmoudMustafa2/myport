@@ -50,7 +50,12 @@
   margin: 0;
   padding: 0;
   font: inherit;
+  
 }
+
+
+
+
 
 *,
 *::after,
@@ -85,11 +90,14 @@ body ,
   background-color: var(--color-background);
   color: var(--color-text);
   border: 0;
-  
 }
 
-.container {
 
+
+
+
+
+.container {
   display: grid;
   row-gap: 11rem;
   margin: 0 auto;
@@ -97,6 +105,13 @@ body ,
   padding-inline: var(--gutter);
   
 }
+
+
+
+
+
+
+
 
 /*ده الفيديو اللي شغال في الخلفية*/
 .video__loop{
@@ -238,7 +253,7 @@ background-color: var(--color-background);    /*  السطر ده علي اله�
 
 
 
-.berger-menu__checkbox{
+.burger-menu__checkbox{
   display: none;    /*علشان انا عاوزه يظهر في الفون فقط*/
 }
 
@@ -388,7 +403,7 @@ animation: jump 1s infinite alternate ease-in-out;
   border-radius: 5%;
   justify-self: end;
   align-items: flex-start;
-  opacity: 0.4;
+  opacity: 0.8;
 
  }
  .bio__pic{
@@ -609,7 +624,7 @@ color: var(--color-red);
 .footer{
   color: red;
   padding: 1rem 0;
-  font-size: var(--font-size-15);
+  font-size: var(--font-size-12);
   border-top: 0.1rem solid var(--color-black);
 }
 /*End footer*/
@@ -809,8 +824,11 @@ width: 200px;
     order: -1;
     }
 
+
+
+
   /*ده الكود  بتاع البرجر منيو */
-.berger-menu{
+.burger-menu{
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -818,27 +836,36 @@ width: 200px;
   z-index: 0;
   align-self: center;
 }
-.berger-menu_bar{
+
+
+.burger-menu__bar{
 height: 0.3rem;
 width: 4.375rem;
 background-color: var(--color-text);
 transition: var(--transition-timing);
 }
+
+
 /*ال3 سطور دول بتوع الانيميشن اللي هيحصل لما اضغط عليها
 يعني شكل ال3 سطور الصغيرين هيبقوا علي شكل اكس*/
-.header:has(.berger-menu__checkbox:checked) .berger-menu_bar:nth-child(1){
-transform: translateY(10px)  rotate(40deg);
+
+.header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(1){
+transform: translateY(2px)  rotate(40deg);
 }
-.header:has(.berger-menu__checkbox:checked) .berger-menu_bar:nth-child(2){
+
+.header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(2){
  opacity: 0;
  visibility: hidden;
   }
-.header:has(.berger-menu__checkbox:checked) .berger-menu_bar:nth-child(3){
-    transform: translateY(-7px)  rotate(-40deg);
+.header:has(.burger-menu__checkbox:checked) .burger-menu__bar:nth-child(3){
+    transform: translateY(-2px)  rotate(-40deg);
     }
-    .berger-menu__checkbox:checked +.navigation{   /*100 السطر ده بقوله لما ادوس علي البرجر منيو خلي التوب */ 
+
+
+    .burger-menu__checkbox:checked +.navigation{   /*100 السطر ده بقوله لما ادوس علي البرجر منيو خلي التوب */ 
       top: 100%;                                           /*يعني هينزلها لتحت وتظهر*/
     }
+
     .navigation{
       position: absolute;
       width: 100vw;
@@ -849,6 +876,7 @@ transform: translateY(10px)  rotate(40deg);
       transition: var(--transition-timing);
       z-index: -1;
     }
+
     .navigation__list{
       justify-content: center;    /*   justify-content  دي بتوسطن الكلام علي المحور الافقي*/
     }
