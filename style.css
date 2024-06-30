@@ -376,7 +376,7 @@ animation: jump 1s infinite alternate ease-in-out;
   justify-self: end;  /*ده بقوله انه مياخدش المساحة كلها*/
 
  }
-  .bio__pic__content::before{   /*ده كود الخلفية السوداء*/
+  .bio__pic__content::before{   /*ده كود خلفية الصورة*/
   content: "";
   position: absolute;
   background-color: var(--color-box-img);
@@ -625,7 +625,7 @@ html:has(.toggle__chechbox:checked){
   --color-link-bg: var(--color-green);
   --color-grey: #080808;
   --color-input-border: var(--color-white);
-  
+
  #contact__input{
   color: #fff;
  }
@@ -637,93 +637,177 @@ html:has(.toggle__chechbox:checked){
 
 
 
-
 /* هنا انا بعمل تعديلات علي تنسيق الصفحة علشان يناسب كل الاجهزة*/
 /*Responsive*/
 
+/*هيتم التقسيم ل3 مراحل
+ الفون من 0 ل500 
+والتالب من 501 ل 1000 
+واللاب وباقي الشاشات من فوق 1000 */
 
-@media (max-width:1000px) {    /* هنا بقوله اي جهاز عرضه اصغر من 1000 بيكسل زي الموبايل او التابلت خلي الخط بتاعه 8 بيكسل*/
-  html{
-    font-size: 8px;   /*انا صغرت الخط هنا*/
+/*اهم حاجة  هيتغيروا ف ال3 اجزاء هما  1-خلفية ووضع الصورة    و2- الخلفيات البيضاء     3- وترتيب الشهادات والمشاريع */
+
+
+/*السطر ده بيغير ترتيب عناصر المشاريع */
+/* .projects__data:nth-of-type(2){    
+  order: 1;
+} */
+
+.clients__opinions{
+  font-size: var(--font-size-24);
   }
-.section--with-bg{
+  .contact{
+    row-gap: 6rem;
+  }
+  .contact__formcontact{
+  order: -1;
+  }
+  
+  /*///////////////////////////////*/
+  
+  .bio__pic__content::before{   /*ده سطر حجم خلفية الصورة */
+    width: 350px;
+    height: 500px;
+   }
+  .section-with-bg1::before{    /*ده سطر الخلفية البيضاء بتاعت الشهادات*/
   width: 100%;
-}  
-}
- 
-
-/*ده التابلت*/
-@media (max-width:800px) {      
-.container {
-   row-gap: 8rem; 
+  height:2100px;
   }
- .section{
-  grid-template-columns: 1fr;
+  .section-with-bg2::before{  /*ده سطر الخلفية البيضاء بتاعت الاراء*/
+    width: 100%; 
+    height:420px;
+    }
+  
+                                   /*دول اللي بيغيروا شكل الشهادات والمشاريع*/
+   #skills{
+    grid-template-columns: 1fr;
+    row-gap: 6rem;
+    justify-items: center;
+  } 
+   .projects__main{
+    grid-template-columns: 1fr;
+    row-gap: 6rem;
+    justify-items: center; 
+  } 
+
+
+
+
+
+
+
+/***********************************************************/
+ /*phone dooooooooone*/
+/*  phone  0:500*/    
+@media(max-width:500px)    {
+
+  .section{
+   grid-template-columns: 1fr;
+  }
+  .header{
+    grid-template-columns: 1fr;
+    width: 300px;
+   
+  }
+  
+  .header::before{
+    z-index: 0;
+   
+  }
+  #bio{
+ margin-left: 25px;
+  }
+  
+ #photo{
+  width: 230px;
+  height: 260px;
+  margin-bottom: 30px;
  }
- .bio__pic__content{
-  grid-row: 1;
-  justify-self: center;
-  margin-bottom: 4rem;
- }
-.skills__list{
-  grid-template-columns: repeat(2,1fr);
+ 
+ .bio__pic__content::before{   /*ده سطر حجم خلفية الصورة */
+  height: 210px;
+  width: 150px;
+  margin-top: 250px;
+
 }
-.projects__main{
-  grid-template-columns: 1fr;
-  row-gap: 6rem;
+#me{
+  width: 25px;
+}
+  .bio__pic__content{
+   grid-row: 1;
+   justify-self: center;
+   margin-bottom: 4rem;
+/*    margin-left: 50px;
+ */ }
+
+ .skills__title{
+  justify-content: center;
+  align-items: center;
   justify-items: center;
 }
-.projects__data:nth-of-type(2){
-  order: 1;
-}
-.clients__opinions{
-font-size: var(--font-size-24);
-}
-.contact{
-  row-gap: 6rem;
-}
-.contact__formcontact{
-order: -1;
-}
-
-
-.bio__pic__content::before{
-  width: 350px;
-  height: 500px;
- }
-.section-with-bg1::before{
-
-width: 950px;
-
-height:1300px;
-}
-.section-with-bg2::before{
-
-  width: 100%;
-  height:420px;
-  }
-
-
-
-}
-
-
-
-
-/* ده الفون*/ 
-@media (max-width:1000px) { 
   html {
-    font-size: 8px;
+    font-size: 2px;
   }
-.header{
-padding: 0;
-}
-.header::before{
-  z-index: 0;
-}
- .bio__pic{
-   width: 100%;
+  #bio{
+      grid-template-columns: 1fr;
   }
+
+  .bio__pic__content{
+grid-row: 1;
+width: 200px;
+justify-self: center;
+  } 
+  .bio__data{
+    order: -1;
+  }
+
+#m2{
+  margin-left: 20px;
+}
+#media{
+  width: 300px;
+  margin-top: 100px;
+/* margin-left: 25px;
+ */}
+#projects{
+  width: 300px;
+
+}
+.projects__data:nth-of-type(2){    
+  order: 1;
+} 
+  
+.section-with-bg1::before{    /*ده سطر الخلفية البيضاء بتاعت الشهادات*/
+  width: 100vw;    height:620px;
+  }
+
+    #skills{
+      font-size: 2px;
+    }
+    .skills__title{
+      font-size: 20px;
+    }
+.skills{
+  font-size: 20px;
+}
+
+#clients{
+  font-size: var(--font-size-24);
+  width: 200px;
+  justify-self: center;
+}
+.section-with-bg2::before{  /*ده سطر الخلفية البيضاء بتاعت الاراء*/
+  width: 100vw;    height:120px;
+  }
+  #contact{
+    grid-template-columns: 1fr;
+    row-gap: 6rem;
+width: 200px;
+  }
+
+    .contact__formcontact{
+    order: -1;
+    }
 
   /*ده الكود  بتاع البرجر منيو */
 .berger-menu{
@@ -772,5 +856,106 @@ transform: translateY(10px)  rotate(40deg);
     padding: 3rem 0;
     z-index: 1;
   }
-  }
+}
+
+
+/***********************************************************/
+
+
+
+ /**tablet dooooooooone/
+/* tablet  501:1000*/
+ @media (min-width:501px) /* and(max-width:1000px) */{
+
+  .bio__pic__content::before{   /*ده سطر حجم خلفية الصورة */
+    width: 590px;
+    height: 900px;
+   }
+   .section-with-bg1::before{    /*ده سطر الخلفية البيضاء بتاعت الشهادات*/
+    width: 1880px;
+    height:2000px;
+    }
+    .buttons{
+      width: 1050px; 
+       }
+                                     /*دول اللي بيغيروا شكل الشهادات والمشاريع*/
+     #skills{
+      grid-template-columns: repeat(2,1fr);
+      row-gap: 6rem;
+      justify-items: center;
+    } 
+     .projects__main{
+      grid-template-columns: repeat(2,1fr);
+      row-gap: 6rem;
+      justify-items: center; 
+    } 
+    .section-with-bg2::before{  /*ده سطر الخلفية البيضاء بتاعت الاراء*/
+      width: 1900px;
+      height:100%;
+      }
+      .contact{
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 6rem;
+    }
+  
+  
+      .contact__formcontact{
+      order: 1;
+      }
+  
+  } 
+ 
+ 
+ 
+
+ 
+
+
+ /**desktop dooooooooone/
+/* desktop  1000:up*/
+@media (min-width:1001px){
+  .bio__pic__content::before{   /*ده سطر حجم خلفية الصورة */
+    width: 590px;
+    height: 900px;
+   }
+   .section-with-bg1::before{    /*ده سطر الخلفية البيضاء بتاعت الشهادات*/
+    width: 100vw;
+    
+    height:2000px;
+    }
+
+  .buttons{
+width: 1050px; 
+ }
+
+
+                                     /*دول اللي بيغيروا شكل الشهادات والمشاريع*/
+     #skills{
+      grid-template-columns: repeat(2,1fr);
+      row-gap: 6rem;
+      justify-items: center;
+    } 
+     .projects__main{
+      grid-template-columns: repeat(2,1fr);
+      row-gap: 6rem;
+      justify-items: center; 
+    } 
+    .section-with-bg2::before{  /*ده سطر الخلفية البيضاء بتاعت الاراء*/
+      width: 100vw;
+      height:100%;
+      }
+      .contact{
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 6rem;
+    }
+  
+  
+      .contact__formcontact{
+      order: 1;
+      }
+  
+}
+
+
+
 /*End Responsive*/
